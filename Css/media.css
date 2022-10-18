@@ -1,0 +1,5 @@
+@media (prefers-color-scheme: dark) {
+    :root {
+        --body: #151437;
+    }
+} 

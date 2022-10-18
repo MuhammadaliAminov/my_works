@@ -1,0 +1,22 @@
+@import 'font.css';
+
+:root {
+    --body: #fff;
+    --white: #fff;
+    --text: #323232;
+    --link: #7177F1;
+    --title: #7177F1;
+    --btn: #7177F1;
+    --dots-active: #7177F1;
+    --dots: #828282;
+    --font_M: 'Montserrat';
+    --font_T: 'Trebuchet';
+}
+
+h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+}
+
+body {
+    background: var(--body);
+}
