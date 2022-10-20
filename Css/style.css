@@ -40,10 +40,53 @@ body {
     text-transform: capitalize;
     display: block;
     text-align: center;
+    transition: 500ms;
 }
 
+.all-btn:hover {
+    background: var(--white);
+    color: var(--btn) !important;
+}
+
+@keyframes animation {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg) scale(1.2);
+        border-radius: 0;
+    }
+}
 
 /* ==================================== Header start =============================== */
+
+
+.header__nav {
+    position: relative;
+}
+
+.header__nav::before {
+    content: '';
+    position: absolute;
+    width: 3.5vw;
+    height: 3.5vw;
+    left: 243.95px;
+    top: 32px;
+    border-radius: 50%;
+    border: 0.3vw solid #790FF1;
+    z-index: -1;
+    animation: animation 2s linear infinite alternate;
+}
+
+.header__nav::after {
+    content: '';
+    position: absolute;
+    width: 4.5vw;
+    height: 4.5vw;
+    right: 42px;
+    top: 80.26px;
+    border: 0.3vw solid #9297EF;
+}
 
 .header__list {
     column-gap: 30px;
@@ -58,4 +101,49 @@ body {
 
 .header__link-btn {
     width: 190px;
+}
+
+.header__menu {
+    width: 40px;
+    height: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border: 0;
+    position: relative;
+    transition: 500ms;
+}
+
+.header__menu::before,
+.header__menu::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--text);
+    transition: 500ms;
+}
+
+.header__menu::after {
+    top: 10px;
+}
+
+.header__menu:focus {
+    box-shadow: unset;
+}
+
+.header__menu:not(.collapsed)::before {
+    top: 0;
+    transform: rotate(222deg);
+}
+.header__menu:not(.collapsed)::after {
+    top: 0;
+    transform: rotate(-222deg);
+}
+
+.header__menu.collapsed {
+    background: var(--text);
 }

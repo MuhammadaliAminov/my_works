@@ -1,6 +1,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --body: #151437;
+        --text: #fff;
     }
     .logo::before {
         content: url(../img/svg/logo-dark.svg);
