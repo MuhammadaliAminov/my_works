@@ -2,6 +2,7 @@
     :root {
         --body: #151437;
         --text: #fff;
+        --dots: #fff;
     }
     .logo::before {
         content: url(../img/svg/logo-dark.svg);
