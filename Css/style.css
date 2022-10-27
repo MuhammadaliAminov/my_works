@@ -225,3 +225,105 @@ body {
 .header__carousel-img {
     max-height: 500px;
 }
+
+/* ============================== About start ======================== */
+
+.about {
+    padding: 80px 0;
+}
+
+.about__image {
+    position: relative;
+}
+
+.about__btn {
+    width: 190px;
+    padding: 13px 0;
+    position: absolute;
+    top: 18px;
+    left: -90px;
+}
+
+.about__btn i {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #0FDAC2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -19px;
+    right: -19px;
+}
+
+.about__desc {
+    display: grid;
+    row-gap: 25px;
+    background: var(--body);
+    box-shadow: 0px 0px 5px 3px rgba(113, 119, 241, 0.15);
+    border-radius: 8px;
+    padding: 34px 30px 24px;
+}
+
+.about__desc-txt {
+    text-transform: capitalize;
+}
+
+.about__desc-btn {
+    width: 190px;
+}
+
+
+/* ================================ Capabilities start ================================ */
+
+.capabilities {
+    padding: 80px 0;
+}
+
+.capabilities__title {
+    margin-bottom: 30px;
+}
+
+.accordion {
+    box-shadow: 0px 0px 5px 3px rgba(113, 119, 241, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion__button {
+    width: 100%;
+    border: none;
+    background: var(--title);
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--white);
+}
+
+.accordion__button.collapsed {
+    background: var(--body);
+    color: var(--title);
+}
+
+.accordion__item:first-of-type .accordion__button.collapsed .accordion__brand {
+    color: #E44F26;
+}
+.accordion__item:nth-of-type(2) .accordion__button.collapsed .accordion__brand {
+    color: #33A9DC;
+}
+
+.accordion__brand-down {
+    font-size: 25px;
+}
+
+.accordion__body {
+    font-size: 18px;
+    text-transform: capitalize;
+    padding: 25px 30px 55px;
+    background: var(--title);
+    color: var(--white);
+}
