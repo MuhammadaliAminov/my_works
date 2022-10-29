@@ -297,11 +297,13 @@ body {
     background: var(--title);
     display: flex;
     align-items: center;
+    justify-content: center;
     column-gap: 20px;
     padding: 15px 30px;
     font-size: 18px;
     font-weight: 900;
     color: var(--white);
+    position: relative;
 }
 
 .accordion__button.collapsed {
@@ -318,6 +320,8 @@ body {
 
 .accordion__brand-down {
     font-size: 25px;
+    transform: rotate(0);
+    transition: 500ms;
 }
 
 .accordion__body {
@@ -326,4 +330,18 @@ body {
     padding: 25px 30px 55px;
     background: var(--title);
     color: var(--white);
+}
+
+.accordion__item .accordion__button.collapsed .accordion__brand-down {
+    transform: rotate(180deg);
+}
+
+.accordion__item:first-of-type .accordion__button.collapsed::before, 
+.accordion__item:nth-of-type(2) .accordion__button.collapsed::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background: #ddd;
+    width: 95%;
+    bottom: 0;
 }
