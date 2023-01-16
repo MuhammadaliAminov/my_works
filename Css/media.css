@@ -3,8 +3,23 @@
         --body: #151437;
         --text: #fff;
         --dots: #fff;
+        --btn-2: #fff;
+        --footer-link: #7177F1;
     }
     .logo::before {
         content: url(../img/svg/logo-dark.svg);
     }
-} 
+
+}
+
+@media screen and ( max-width: 1200px ) {
+    .about::before {
+        display: none;
+    }
+}
+
+@media screen and ( max-width: 1200px ) {
+    .works::after {
+        display: none;
+    }
+}
